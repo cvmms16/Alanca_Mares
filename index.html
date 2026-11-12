@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alanca_Mares: agenda cultural de Palmares, Pernambuco.">
+  <title>Alanca_Mares | Agenda Cultural de Palmares</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Alanca Mares - início">
+      <span class="brand-mark">A<span>+</span></span>
+      <span>alanca<span class="brand-light">_mares</span><small>AGENDA CULTURAL DE PALMARES</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="main-nav">
+      <a href="#inicio">Início</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#sobre">Sobre o projeto</a>
+      <a class="nav-cta" href="#cadastro">Divulgar evento</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="eyebrow-line"></span> CULTURA QUE CONECTA</span>
+        <h1>Palmares tem<br><em>histórias</em> para viver.</h1>
+        <p>Descubra encontros, apresentações e manifestações culturais que movimentam nossa cidade. Tudo em um só lugar.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#agenda">Explorar eventos <span>↗</span></a>
+          <a class="text-link" href="#sobre">Conheça o projeto</a>
+        </div>
+        <div class="hero-note"><span class="note-dot"></span> Feito para valorizar a cultura de Palmares-PE</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração abstrata inspirada na cultura e na paisagem pernambucana">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-river"></div>
+        <div class="art-label">NOSSA<br>CULTURA,<br>NOSSO LUGAR.</div>
+        <span class="art-star star-one">✳</span><span class="art-star star-two">✳</span>
+        <span class="art-caption">MATA SUL · PERNAMBUCO</span>
+      </div>
+    </section>
+
+    <section class="quick-info">
+      <div><strong>01</strong><span>Agenda centralizada</span></div>
+      <div><strong>02</strong><span>Cultura local em destaque</span></div>
+      <div><strong>03</strong><span>Informação acessível</span></div>
+    </section>
+
+    <section class="section agenda-section" id="agenda">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FIQUE POR DENTRO</span>
+          <h2>Agenda <em>cultural</em></h2>
+          <p>Encontre atividades e descubra o que acontece em Palmares.</p>
+        </div>
+        <span class="section-count" id="event-count">0 eventos</span>
+      </div>
+
+      <div class="filters">
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" id="search-input" placeholder="Buscar por evento ou local..." aria-label="Buscar eventos">
+        </label>
+        <select id="category-filter" aria-label="Filtrar por categoria">
+          <option value="Todas">Todas as categorias</option>
+          <option>Música</option><option>Teatro</option><option>Dança</option>
+          <option>Literatura</option><option>Cultura popular</option><option>Artesanato</option>
+          <option>Eventos comunitários</option><option>Outros</option>
+        </select>
+      </div>
+
+      <div class="category-chips" id="category-chips">
+        <button class="chip active" data-category="Todas">Todos</button>
+        <button class="chip" data-category="Música">Música</button>
+        <button class="chip" data-category="Teatro">Teatro</button>
+        <button class="chip" data-category="Dança">Dança</button>
+        <button class="chip" data-category="Literatura">Literatura</button>
+        <button class="chip" data-category="Cultura popular">Cultura popular</button>
+      </div>
+
+      <div class="event-grid" id="event-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Nenhum evento encontrado. Tente mudar a busca ou a categoria.</p>
+      <p class="demo-note">Os eventos iniciais são exemplos demonstrativos. Consulte os organizadores para confirmar datas e informações.</p>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <div class="about-decoration">✳</div>
+      <div class="about-copy">
+        <span class="eyebrow">SOBRE O ALANCA_MARES</span>
+        <h2>Dar visibilidade<br>ao que é <em>nosso.</em></h2>
+      </div>
+      <div class="about-text">
+        <p>O Alanca_Mares nasceu para aproximar as pessoas da programação cultural de Palmares. Quando as informações ficam espalhadas em vários canais, encontrar um evento pode ser difícil.</p>
+        <p>Por isso, reunimos em uma agenda simples os detalhes das atividades culturais da cidade, valorizando artistas, produtores, organizadores e a comunidade.</p>
+        <a class="text-link light-link" href="#cadastro">Faça parte dessa agenda ↗</a>
+      </div>
+    </section>
+
+    <section class="section contribute-section" id="cadastro">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SUA CULTURA TEM ESPAÇO AQUI</span>
+          <h2>Divulgue um <em>evento</em></h2>
+          <p>Preencha as informações para adicionar um evento à agenda desta demonstração.</p>
+        </div>
+      </div>
+      <form id="event-form" class="event-form">
+        <div class="form-row">
+          <label>Nome do evento<input name="name" required maxlength="70" placeholder="Ex.: Encontro Cultural"></label>
+          <label>Categoria<select name="category" required>
+            <option value="">Selecione</option><option>Música</option><option>Teatro</option><option>Dança</option>
+            <option>Literatura</option><option>Cultura popular</option><option>Artesanato</option>
+            <option>Eventos comunitários</option><option>Outros</option>
+          </select></label>
+        </div>
+        <label>Descrição<textarea name="description" required maxlength="240" rows="3" placeholder="Conte um pouco sobre o evento..."></textarea></label>
+        <div class="form-row">
+          <label>Data<input name="date" type="date" required></label>
+          <label>Horário<input name="time" type="time" required></label>
+        </div>
+        <div class="form-row">
+          <label>Local<input name="location" required maxlength="90" placeholder="Local em Palmares-PE"></label>
+          <label>Imagem (URL)<input name="image" type="url" placeholder="https://..."></label>
+        </div>
+        <button class="button button-primary" type="submit">Adicionar à agenda <span>＋</span></button>
+        <p class="form-feedback" id="form-feedback" role="status"></p>
+      </form>
+      <p class="demo-note">Demonstração acadêmica: os eventos cadastrados ficam salvos somente neste navegador, usando armazenamento local. Ainda não há banco de dados ou publicação automática.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">A<span>+</span></span><span>alanca<span class="brand-light">_mares</span><small>AGENDA CULTURAL DE PALMARES</small></span></a>
+    <p>Valorizando a cultura de Palmares-PE.</p>
+    <span class="copyright">© 2026 Alanca_Mares · Projeto acadêmico</span>
+  </footer>
+
+  <dialog id="event-dialog" class="event-dialog">
+    <button class="dialog-close" id="dialog-close" aria-label="Fechar">×</button>
+    <img id="dialog-image" alt="">
+    <div class="dialog-content">
+      <span class="event-category" id="dialog-category"></span>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+      <div class="dialog-meta" id="dialog-meta"></div>
+    </div>
+  </dialog>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
